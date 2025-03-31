@@ -39,7 +39,7 @@ export default function TeamPage() {
             <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover">
               <div className="relative h-96">
                 <Image
-                  src="/coordinator.jpg"
+                  src="/Coordinator.jpg"
                   alt="Rudresh Singh"
                   fill
                   className="object-cover"
@@ -66,7 +66,7 @@ export default function TeamPage() {
             <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover">
               <div className="relative h-96">
                 <Image
-                  src="/co-coordinator.jpg"
+                  src="/Co-coordinator.jpg"
                   alt="Sankalp"
                   fill
                   className="object-cover object-top" // Focus on the top part

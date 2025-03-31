@@ -156,7 +156,7 @@ export default function ProjectsPage() {
             <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover">
               <div className="relative h-64">
                 <Image
-                  src="/futureproject1.jpg"
+                  src="/futureProject1.jpg"
                   alt="Control Multiple Drones with IPS"
                   fill
                   className="object-cover"
@@ -177,7 +177,7 @@ export default function ProjectsPage() {
             <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover">
               <div className="relative h-64">
                 <Image
-                  src="/futureproject2.jpg"
+                  src="/futureProject2.jpg"
                   alt="High Endurance UAV Drones"
                   fill
                   className="object-cover"
