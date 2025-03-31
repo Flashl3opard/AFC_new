@@ -16,7 +16,6 @@ const navLinks = [
   { name: "Event Report", href: "/eventreport" },
   { name: "Team", href: "/team" },
   { name: "Gallery", href: "/gallery" },
-  { name: "Sponsors", href: "/sponsors" },
   { name: "Contact", href: "/contact" }, // Added Event Report link
 ];
 

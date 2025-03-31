@@ -11,19 +11,32 @@ export default function EventReportPage() {
 
   const events = [
     {
-      title: "Aerothon",
+      title: "WRC 24",
       image: "/googledocs.png",
-      reportText: "Open Report",
+      reportText:
+        "The WRC 24 event showcased innovative designs and engineering solutions in the world of competitive drone racing. Teams from various universities participated, demonstrating their skills and creativity.",
+      date: "2024", // Updated date
     },
     {
-      title: "WRC",
+      title: "Sky Maneuvers 24",
       image: "/googledocs.png",
-      reportText: "Open Report",
+      reportText:
+        "Sky Maneuvers 24 focused on advanced aerial maneuvers and techniques, providing participants with hands-on experience in drone piloting and control. The event included workshops and live demonstrations.",
+      date: "2024", // Updated date
     },
     {
-      title: "DDC",
+      title: "Aerothon '24",
       image: "/googledocs.png",
-      reportText: "Open Report",
+      reportText:
+        "Aerothon '24 was a thrilling competition where teams designed and built drones to complete a series of challenging tasks. The event encouraged innovation and teamwork among participants.",
+      date: "2024", // Updated date
+    },
+    {
+      title: "Sky Maneuvers 25",
+      image: "/googledocs.png",
+      reportText:
+        "Sky Maneuvers 25 aimed to push the boundaries of drone technology with a focus on agility and precision. Participants engaged in various challenges that tested their skills and creativity.",
+      date: "2025", // Updated date
     },
   ];
 
@@ -36,49 +49,19 @@ export default function EventReportPage() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6 card-hover">
-              <h3 className="text-xl font-bold mb-4">
-                Featured in Tech Magazine
-              </h3>
-              <p className="text-gray-400 mb-4">
-                Our innovative approach to drone design was featured in the
-                leading technology magazine "TechInnovate" in their special
-                issue on emerging aerospace technologies.
-              </p>
-              <div className="text-primary font-medium">June 2022</div>
-            </div>
-
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6 card-hover">
-              <h3 className="text-xl font-bold mb-4">
-                University Excellence Award
-              </h3>
-              <p className="text-gray-400 mb-4">
-                Received the University Excellence Award for outstanding
-                contribution to technical innovation and research in the field
-                of unmanned aerial vehicles.
-              </p>
-              <div className="text-primary font-medium">December 2022</div>
-            </div>
-
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6 card-hover">
-              <h3 className="text-xl font-bold mb-4">Local News Coverage</h3>
-              <p className="text-gray-400 mb-4">
-                Our team's success at the National Drone Competition was covered
-                by local news channels, highlighting the innovative work being
-                done by students in aerospace engineering.
-              </p>
-              <div className="text-primary font-medium">March 2023</div>
-            </div>
-
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6 card-hover">
-              <h3 className="text-xl font-bold mb-4">Industry Partnership</h3>
-              <p className="text-gray-400 mb-4">
-                Established a collaborative partnership with leading aerospace
-                company for research and development of next-generation drone
-                technologies.
-              </p>
-              <div className="text-primary font-medium">August 2023</div>
-            </div>
+            {events.map((event, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6 card-hover"
+              >
+                <h3 className="text-xl font-bold mb-4">{event.title}</h3>
+                <p className="text-gray-400 mb-4">{event.reportText}</p>
+                <div className="text-primary font-medium">
+                  Date: {event.date}
+                </div>{" "}
+                {/* Updated to use the date from the event object */}
+              </div>
+            ))}
           </div>
         </div>
       </section>

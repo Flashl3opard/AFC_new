@@ -12,7 +12,7 @@ export default function AchievementsPage() {
             <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover">
               <div className="relative h-64">
                 <Image
-                  src="/achievement-1.png"
+                  src="/achievement1.jpg"
                   alt="Aerothon22"
                   fill
                   className="object-cover"
@@ -32,7 +32,7 @@ export default function AchievementsPage() {
             <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover">
               <div className="relative h-64">
                 <Image
-                  src="/achievement-2.png"
+                  src="/achievement2.jpg"
                   alt="SAE Indian Southern Section DDC '23"
                   fill
                   className="object-cover"
@@ -53,7 +53,7 @@ export default function AchievementsPage() {
             <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover">
               <div className="relative h-64">
                 <Image
-                  src="/achievement-3.png"
+                  src="/achievement3.jpg"
                   alt="IIT Roorkee Tech Fest"
                   fill
                   className="object-cover"
