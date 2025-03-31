@@ -16,7 +16,7 @@ const navLinks = [
   { name: "Event Report", href: "/eventreport" },
   { name: "Team", href: "/team" },
   { name: "Gallery", href: "/gallery" },
-  { name: "Contact", href: "/contact" }, // Added Event Report link
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -41,7 +41,7 @@ export default function Navbar() {
     <header
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
-        scrolled ? "bg-black" : "bg-black/90" // Set navbar to black
+        scrolled ? "bg-black/80" : "bg-black/50" // Adjust opacity for transparency
       )}
     >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
