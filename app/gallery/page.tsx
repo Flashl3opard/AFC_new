@@ -11,7 +11,7 @@ export default function GalleryPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="relative h-80 rounded-lg overflow-hidden card-hover">
               <Image
-                src="/gallery-1.png"
+                src="/place.png"
                 alt="Gallery Image 1"
                 fill
                 className="object-cover"
@@ -20,7 +20,7 @@ export default function GalleryPage() {
 
             <div className="relative h-80 rounded-lg overflow-hidden card-hover">
               <Image
-                src="/gallery-2.png"
+                src="/place.png"
                 alt="Gallery Image 2"
                 fill
                 className="object-cover"
@@ -29,7 +29,7 @@ export default function GalleryPage() {
 
             <div className="relative h-80 rounded-lg overflow-hidden card-hover">
               <Image
-                src="/gallery-3.png"
+                src="/place.png"
                 alt="Gallery Image 3"
                 fill
                 className="object-cover"
@@ -38,7 +38,7 @@ export default function GalleryPage() {
 
             <div className="relative h-80 rounded-lg overflow-hidden card-hover md:col-span-2">
               <Image
-                src="/gallery-4.png"
+                src="/place.png"
                 alt="Gallery Image 4"
                 fill
                 className="object-cover"
@@ -47,7 +47,7 @@ export default function GalleryPage() {
 
             <div className="relative h-80 rounded-lg overflow-hidden card-hover">
               <Image
-                src="/gallery-5.png"
+                src="/place.png"
                 alt="Gallery Image 5"
                 fill
                 className="object-cover"
@@ -56,7 +56,7 @@ export default function GalleryPage() {
 
             <div className="relative h-80 rounded-lg overflow-hidden card-hover">
               <Image
-                src="/gallery-6.png"
+                src="/place.png"
                 alt="Gallery Image 6"
                 fill
                 className="object-cover"
@@ -65,7 +65,7 @@ export default function GalleryPage() {
 
             <div className="relative h-80 rounded-lg overflow-hidden card-hover">
               <Image
-                src="/gallery-7.png"
+                src="/place.png"
                 alt="Gallery Image 7"
                 fill
                 className="object-cover"
@@ -74,7 +74,7 @@ export default function GalleryPage() {
 
             <div className="relative h-80 rounded-lg overflow-hidden card-hover">
               <Image
-                src="/gallery-8.png"
+                src="/place.png"
                 alt="Gallery Image 8"
                 fill
                 className="object-cover"
@@ -93,7 +93,7 @@ export default function GalleryPage() {
             <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover">
               <div className="relative h-64">
                 <Image
-                  src="/event-1.png"
+                  src="/place.png"
                   alt="Annual Drone Exhibition"
                   fill
                   className="object-cover"
@@ -117,7 +117,7 @@ export default function GalleryPage() {
             <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover">
               <div className="relative h-64">
                 <Image
-                  src="/event-2.png"
+                  src="/place.png"
                   alt="Workshop Series"
                   fill
                   className="object-cover"
@@ -141,7 +141,7 @@ export default function GalleryPage() {
             <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover">
               <div className="relative h-64">
                 <Image
-                  src="/event-3.png"
+                  src="/place.png"
                   alt="Competition Preparation"
                   fill
                   className="object-cover"

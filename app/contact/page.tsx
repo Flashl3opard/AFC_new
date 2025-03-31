@@ -46,10 +46,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg">Email</h3>
-                    <p className="text-gray-400">aeroclub@example.edu</p>
-                    <p className="text-gray-400">
-                      coordinator@aeroclub.example.edu
-                    </p>
+                    <p className="text-gray-400">afc@iiitdmj.ac.in</p>
+                    <p className="text-gray-400"></p>
                   </div>
                 </div>
 
@@ -59,8 +57,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg">Phone</h3>
-                    <p className="text-gray-400">+91 123 456 7890</p>
-                    <p className="text-gray-400">+91 987 654 3210</p>
+                    <p className="text-gray-400">+91 84096 46129</p>
+                    <p className="text-gray-400">+91 85428 27761</p>
                   </div>
                 </div>
 
@@ -70,13 +68,11 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg">Location</h3>
+                    <p className="text-gray-400">AFC Workshop</p>
                     <p className="text-gray-400">
-                      Department of Aerospace Engineering
+                      Above Hall-1 Canteen IIITDMJ
                     </p>
-                    <p className="text-gray-400">
-                      University Campus, Example City
-                    </p>
-                    <p className="text-gray-400">Pin: 123456</p>
+                    <p className="text-gray-400">Pin: 482005</p>
                   </div>
                 </div>
               </div>

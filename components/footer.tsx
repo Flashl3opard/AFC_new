@@ -24,23 +24,38 @@ export default function Footer() {
               Where Passion Meets Propulsion
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-gray-400 hover:text-primary">
+              <Link
+                href="https://www.facebook.com/afc.iiitdmj"
+                className="text-gray-400 hover:text-primary"
+              >
                 <Facebook size={20} />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-primary">
+              <Link
+                href="https://www.instagram.com/afc_iiitdmj"
+                className="text-gray-400 hover:text-primary"
+              >
                 <Instagram size={20} />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-primary">
+              <Link
+                href="https://x.com/i/flow/login?redirect_after_login=%2Fiiitdm"
+                className="text-gray-400 hover:text-primary"
+              >
                 <Twitter size={20} />
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-primary">
+              <Link
+                href="https://www.linkedin.com/company/aero-fabrication-club-iiitdmj/posts/?feedView=all"
+                className="text-gray-400 hover:text-primary"
+              >
                 <Linkedin size={20} />
                 <span className="sr-only">LinkedIn</span>
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-primary">
+              <Link
+                href="https://www.youtube.com/channel/UCODKL--xMCqXIK31cRdOWOw"
+                className="text-gray-400 hover:text-primary"
+              >
                 <Youtube size={20} />
                 <span className="sr-only">YouTube</span>
               </Link>

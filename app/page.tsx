@@ -47,9 +47,9 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className="relative h-[400px] lg:h-[500px] rounded-lg overflow-hidden ">
+            <div className="relative h-[600px] hidden lg:block rounded-lg overflow-hidden">
               <Image
-                src="/drone1.png"
+                src="/drone3new.png"
                 alt="Drone"
                 fill
                 className="object-contain"
