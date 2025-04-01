@@ -90,8 +90,11 @@ body {
   margin: 0; 
   height: 100vh;
   color: white; 
+  font-family: 'Milker' ,sans-serif;
 } 
 @font-face {
-  font-family: 'Milker';
-  src: url('/fonts/milker.otf') format('truetype');
+  font-family: 'CustomFont';
+  src: url('/fonts/the_rufly/TheRufly.otf') format('otf');
+  src: url('/fonts/the_rufly/TheRufly.ttf') format('otf');
+  font-weight: bold;
 }

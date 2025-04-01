@@ -14,7 +14,10 @@ export default function Home() {
         <div className="container mx-auto px-4 z-10 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h1 className="text-5xl md:text-7xl  tracking-tight font-extrabold  font-milker">
+              <h1
+                className="text-5xl md:text-7xl  tracking-tight font-extrabold  font-milker"
+                style={{ fontFamily: "CustomFont" }}
+              >
                 AERO
                 <br />
                 FABRICATION
