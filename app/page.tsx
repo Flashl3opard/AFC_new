@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight, ArrowRight } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
-
+import Lottie from "lottie-react";
+import Drone1GIF from "../public/droneGIF3.json";
 export default function Home() {
   useEffect(() => {
     AOS.init({
@@ -75,12 +76,7 @@ export default function Home() {
               className="relative h-[600px] hidden lg:block rounded-lg overflow-hidden"
               data-aos="fade-left"
             >
-              <Image
-                src="/drone3new.png"
-                alt="Drone"
-                fill
-                className="object-contain"
-              />
+              <Lottie animationData={Drone1GIF} className="" />
             </div>
           </div>
         </div>
