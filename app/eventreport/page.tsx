@@ -1,6 +1,9 @@
 "use client";
-import { useState } from "react";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 export default function EventReportPage() {
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
@@ -40,11 +43,21 @@ export default function EventReportPage() {
     },
   ];
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true, // Whether animation should happen only once
+    });
+  }, []);
+
   return (
     <div className="pt-16">
-      <section className="py-20 ">
+      <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center">
+          <h2
+            className="text-4xl font-bold mb-12 text-center"
+            data-aos="fade-up"
+          >
             Event Reports
           </h2>
 
@@ -53,13 +66,14 @@ export default function EventReportPage() {
               <div
                 key={index}
                 className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6 card-hover"
+                data-aos="fade-up"
+                data-aos-delay={`${index * 100}`} // Add delay for staggered effect
               >
                 <h3 className="text-xl font-bold mb-4">{event.title}</h3>
                 <p className="text-gray-400 mb-4">{event.reportText}</p>
                 <div className="text-primary font-medium">
                   Date: {event.date}
-                </div>{" "}
-                {/* Updated to use the date from the event object */}
+                </div>
               </div>
             ))}
           </div>

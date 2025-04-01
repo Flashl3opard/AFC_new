@@ -1,18 +1,32 @@
+"use client";
+
+import { useEffect } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 export default function AboutPage() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true, // Whether animation should happen only once
+    });
+  }, []);
+
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="py-20 ">
+      <section className="py-20" data-aos="fade-up">
         <div className="container mx-auto px-4">
-          <h1 className="section-heading">ABOUT</h1>
+          <h1 className="section-heading" data-aos="fade-up">
+            ABOUT
+          </h1>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <p className="text-gray-300 text-lg">
+              <p className="text-gray-300 text-lg" data-aos="fade-up">
                 The Aero Fabrication Club. As the name itself suggests the clubs
                 invokes learning in students by incorporating two major topics
                 which form the building blocks of all the engineering sciences.
@@ -22,19 +36,22 @@ export default function AboutPage() {
                 years of the UG program we are an ever growing and an ever
                 learning family.
               </p>
-              <p className="text-gray-300 text-lg">
+              <p className="text-gray-300 text-lg" data-aos="fade-up">
                 Our mission is to provide hands-on experience in designing,
                 building, and flying unmanned aerial vehicles. We aim to foster
                 innovation, teamwork, and practical engineering skills among our
                 members.
               </p>
-              <p className="text-gray-300 text-lg">
+              <p className="text-gray-300 text-lg" data-aos="fade-up">
                 Through competitions, workshops, and collaborative projects, we
                 create an environment where students can apply theoretical
                 knowledge to real-world challenges in aerospace engineering.
               </p>
             </div>
-            <div className="relative h-[500px] rounded-lg overflow-hidden">
+            <div
+              className="relative h-[500px] rounded-lg overflow-hidden"
+              data-aos="fade-left"
+            >
               <Image
                 src="/about.jpg"
                 alt="Team Photo"
@@ -46,10 +63,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-b from-blue-950/10 to-black">
+      <section
+        className="py-20 bg-gradient-to-b from-blue-950/10 to-black"
+        data-aos="fade-up"
+      >
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-8 card-hover">
+            <div
+              className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-8 card-hover"
+              data-aos="fade-up"
+            >
               <h2 className="text-3xl font-bold mb-6 text-primary">
                 Our Vision
               </h2>
@@ -66,7 +89,10 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-8 card-hover">
+            <div
+              className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-8 card-hover"
+              data-aos="fade-up"
+            >
               <h2 className="text-3xl font-bold mb-6 text-primary">
                 Our Mission
               </h2>
@@ -86,7 +112,7 @@ export default function AboutPage() {
       </section>
 
       {/* History */}
-      <section className="py-20 ">
+      <section className="py-20" data-aos="fade-up">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-12 text-center">Our Journey</h2>
 
@@ -153,7 +179,10 @@ export default function AboutPage() {
       </section>
 
       {/* Join Us CTA */}
-      <section className="py-20 bg-gradient-to-b from-blue-950/20 to-black">
+      <section
+        className="py-20 bg-gradient-to-b from-blue-950/20 to-black"
+        data-aos="fade-up"
+      >
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Join Our Team</h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">

@@ -1,22 +1,39 @@
+"use client";
+
+import { useEffect } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 export default function ProjectsPage() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true, // Whether animation should happen only once
+    });
+  }, []);
+
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="py-20 ">
+      <section className="py-20" data-aos="fade-up">
         <div className="container mx-auto px-4">
-          <h1 className="section-heading">PROJECTS</h1>
+          <h1 className="section-heading" data-aos="fade-up">
+            PROJECTS
+          </h1>
         </div>
       </section>
 
       {/* Completed Projects */}
-      <section className="py-20 ">
+      <section className="py-20" data-aos="fade-up">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center">
+          <h2
+            className="text-4xl font-bold mb-12 text-center"
+            data-aos="fade-up"
+          >
             COMPLETED PROJECTS
           </h2>
 
@@ -43,10 +60,12 @@ export default function ProjectsPage() {
                 description:
                   "The club designed, built and flew a high-speed, agile unmanned aerial vehicle designed specifically for competitive racing. Its sleek, aerodynamic frame is typically made from lightweight material i.e. carbon fiber to maximize speed and maneuverability while ensuring durability.",
               },
-            ].map((project) => (
+            ].map((project, index) => (
               <div
                 key={project.id}
                 className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover"
+                data-aos="fade-up"
+                data-aos-delay={`${index * 100}`} // Staggered effect
               >
                 <div className="relative h-64">
                   <Image
@@ -67,14 +86,23 @@ export default function ProjectsPage() {
       </section>
 
       {/* Ongoing Projects */}
-      <section className="py-20 bg-gradient-to-b from-blue-950/10 to-black">
+      <section
+        className="py-20 bg-gradient-to-b from-blue-950/10 to-black"
+        data-aos="fade-up"
+      >
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center">
+          <h2
+            className="text-4xl font-bold mb-12 text-center"
+            data-aos="fade-up"
+          >
             ONGOING PROJECTS
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover">
+            <div
+              className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover"
+              data-aos="fade-up"
+            >
               <div className="relative h-64">
                 <Image
                   src="/ongoingProject1.jpg"
@@ -95,7 +123,10 @@ export default function ProjectsPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover">
+            <div
+              className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover"
+              data-aos="fade-up"
+            >
               <div className="relative h-64">
                 <Image
                   src="/ongoingProject2.jpg"
@@ -114,7 +145,10 @@ export default function ProjectsPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover">
+            <div
+              className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover"
+              data-aos="fade-up"
+            >
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">
                   3. Custom build flight controller firmware using STM 32
@@ -128,7 +162,10 @@ export default function ProjectsPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover">
+            <div
+              className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover"
+              data-aos="fade-up"
+            >
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">
                   4. Autonomous fixed wing UAV
@@ -145,7 +182,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Future Ideas */}
-      <section className="py-20 ">
+      <section className="py-20" data-aos="fade-up">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-4 text-center">FUTURE IDEAS</h2>
           <p className="text-center text-gray-400 mb-12">
@@ -153,7 +190,10 @@ export default function ProjectsPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover">
+            <div
+              className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover"
+              data-aos="fade-up"
+            >
               <div className="relative h-64">
                 <Image
                   src="/futureProject1.jpg"
@@ -174,7 +214,10 @@ export default function ProjectsPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover">
+            <div
+              className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover"
+              data-aos="fade-up"
+            >
               <div className="relative h-64">
                 <Image
                   src="/futureProject2.jpg"
@@ -199,7 +242,10 @@ export default function ProjectsPage() {
       </section>
 
       {/* Project Collaboration CTA */}
-      <section className="py-20 bg-gradient-to-b from-blue-950/20 to-black">
+      <section
+        className="py-20 bg-gradient-to-b from-blue-950/20 to-black"
+        data-aos="fade-up"
+      >
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Have a Project Idea?</h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">

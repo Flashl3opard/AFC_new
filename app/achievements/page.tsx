@@ -1,15 +1,32 @@
+"use client";
+
+import { useEffect } from "react";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 export default function AchievementsPage() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true, // Whether animation should happen only once
+    });
+  }, []);
+
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="py-20 ">
+      <section className="py-20" data-aos="fade-up">
         <div className="container mx-auto px-4">
-          <h1 className="section-heading">ACHIEVEMENTS</h1>
+          <h1 className="section-heading" data-aos="fade-up">
+            ACHIEVEMENTS
+          </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover">
+            <div
+              className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover"
+              data-aos="fade-up"
+            >
               <div className="relative h-64">
                 <Image
                   src="/Achievement1.jpg"
@@ -29,7 +46,10 @@ export default function AchievementsPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover">
+            <div
+              className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover"
+              data-aos="fade-up"
+            >
               <div className="relative h-64">
                 <Image
                   src="/Achievement2.jpg"
@@ -50,7 +70,10 @@ export default function AchievementsPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover">
+            <div
+              className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover"
+              data-aos="fade-up"
+            >
               <div className="relative h-64">
                 <Image
                   src="/Achievement3.jpg"
@@ -74,14 +97,23 @@ export default function AchievementsPage() {
       </section>
 
       {/* Additional Achievements */}
-      <section className="py-20 bg-gradient-to-b from-blue-950/10 to-black">
+      <section
+        className="py-20 bg-gradient-to-b from-blue-950/10 to-black"
+        data-aos="fade-up"
+      >
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center">
+          <h2
+            className="text-4xl font-bold mb-12 text-center"
+            data-aos="fade-up"
+          >
             MORE ACCOMPLISHMENTS
           </h2>
 
           <div className="space-y-8">
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6 card-hover">
+            <div
+              className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6 card-hover"
+              data-aos="fade-up"
+            >
               <div className="flex flex-col md:flex-row gap-6 items-center">
                 <div className="flex-shrink-0">
                   <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center">
@@ -101,7 +133,10 @@ export default function AchievementsPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6 card-hover">
+            <div
+              className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6 card-hover"
+              data-aos="fade-up"
+            >
               <div className="flex flex-col md:flex-row gap-6 items-center">
                 <div className="flex-shrink-0">
                   <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center">
@@ -121,7 +156,10 @@ export default function AchievementsPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6 card-hover">
+            <div
+              className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6 card-hover"
+              data-aos="fade-up"
+            >
               <div className="flex flex-col md:flex-row gap-6 items-center">
                 <div className="flex-shrink-0">
                   <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center">
@@ -139,7 +177,10 @@ export default function AchievementsPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6 card-hover">
+            <div
+              className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6 card-hover"
+              data-aos="fade-up"
+            >
               <div className="flex flex-col md:flex-row gap-6 items-center">
                 <div className="flex-shrink-0">
                   <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center">

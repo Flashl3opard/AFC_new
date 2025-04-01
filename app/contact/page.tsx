@@ -1,16 +1,23 @@
 "use client";
 
-import type React from "react";
-
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true, // Whether animation should happen only once
+    });
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,13 +33,15 @@ export default function ContactPage() {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-black" data-aos="fade-up">
         <div className="container mx-auto px-4">
-          <h1 className="section-heading">CONTACT</h1>
+          <h1 className="section-heading" data-aos="fade-up">
+            CONTACT
+          </h1>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-8">
-              <p className="text-lg text-gray-300">
+              <p className="text-lg text-gray-300" data-aos="fade-up">
                 Have questions about our club or interested in joining? We'd
                 love to hear from you! Fill out the form or use our contact
                 information below to get in touch with the AeroFabrication Club
@@ -40,18 +49,17 @@ export default function ContactPage() {
               </p>
 
               <div className="space-y-6">
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4" data-aos="fade-up">
                   <div className="bg-primary/10 p-3 rounded-lg">
                     <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-bold text-lg">Email</h3>
                     <p className="text-gray-400">afc@iiitdmj.ac.in</p>
-                    <p className="text-gray-400"></p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4" data-aos="fade-up">
                   <div className="bg-primary/10 p-3 rounded-lg">
                     <Phone className="h-6 w-6 text-primary" />
                   </div>
@@ -62,7 +70,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4" data-aos="fade-up">
                   <div className="bg-primary/10 p-3 rounded-lg">
                     <MapPin className="h-6 w-6 text-primary" />
                   </div>
@@ -77,7 +85,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="pt-6">
+              <div className="pt-6" data-aos="fade-up">
                 <h3 className="font-bold text-lg mb-4">Club Hours</h3>
                 <div className="space-y-2">
                   <div className="flex justify-between">
@@ -96,7 +104,10 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6">
+            <div
+              className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6"
+              data-aos="fade-up"
+            >
               {isSubmitted ? (
                 <div className="flex flex-col items-center justify-center h-full py-12 text-center">
                   <div className="bg-primary/10 p-4 rounded-full mb-4">
@@ -206,9 +217,17 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 bg-gradient-to-b from-blue-950/10 to-black">
+      <section
+        className="py-20 bg-gradient-to-b from-blue-950/10 to-black"
+        data-aos="fade-up"
+      >
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center">FIND US</h2>
+          <h2
+            className="text-4xl font-bold mb-12 text-center"
+            data-aos="fade-up"
+          >
+            FIND US
+          </h2>
 
           <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden h-[400px]">
             <iframe
@@ -226,7 +245,7 @@ export default function ContactPage() {
       </section>
 
       {/* Join Us Section */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-black" data-aos="fade-up">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Join Our Team</h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
@@ -235,7 +254,10 @@ export default function ContactPage() {
             join our team!
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6 card-hover">
+            <div
+              className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6 card-hover"
+              data-aos="fade-up"
+            >
               <h3 className="text-xl font-bold mb-4">For Students</h3>
               <p className="text-gray-400 mb-6">
                 Join our team to gain hands-on experience in drone design,
@@ -249,7 +271,10 @@ export default function ContactPage() {
               </Button>
             </div>
 
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6 card-hover">
+            <div
+              className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6 card-hover"
+              data-aos="fade-up"
+            >
               <h3 className="text-xl font-bold mb-4">For Sponsors</h3>
               <p className="text-gray-400 mb-6">
                 Support the next generation of aerospace engineers and gain
@@ -263,7 +288,10 @@ export default function ContactPage() {
               </Button>
             </div>
 
-            <div className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6 card-hover">
+            <div
+              className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg p-6 card-hover"
+              data-aos="fade-up"
+            >
               <h3 className="text-xl font-bold mb-4">For Partners</h3>
               <p className="text-gray-400 mb-6">
                 Collaborate with us on research projects or technical challenges
