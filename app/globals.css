@@ -94,4 +94,7 @@ body {
   height: 100vh;
   color: white; 
   font-family: 'Milker' ,sans-serif;
+  scroll-behavior: smooth;
 } 
+
+
