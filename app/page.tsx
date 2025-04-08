@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight, ArrowRight } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
+import Lottie from "lottie-react";
+import droneAnimation from "@/public/droneGIF3.json";
 
 export default function Home() {
   useEffect(() => {
@@ -30,8 +32,8 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1
-                className="text-5xl md:text-7xl tracking-tight font-extrabold font-milker"
-                style={{ fontFamily: "CustomFont" }}
+                className="text-5xl md:text-7xl tracking-tight font-extrabold"
+                style={{ fontFamily: "Archivo, sans-serif" }} // Apply Archivo font
                 data-aos="fade-right"
               >
                 AERO
@@ -42,11 +44,16 @@ export default function Home() {
               </h1>
               <p
                 className="text-xl md:text-2xl font-medium text-primary"
+                style={{ fontFamily: "Roboto, sans-serif" }} // Apply Roboto font
                 data-aos="fade-left"
               >
                 WHERE PASSION MEETS PROPULSION
               </p>
-              <p className="text-gray-300 max-w-lg" data-aos="fade-up">
+              <p
+                className="text-gray-300 max-w-lg"
+                style={{ fontFamily: "Roboto, sans-serif" }}
+                data-aos="fade-up"
+              >
                 Designing, building, and flying innovative unmanned aerial
                 vehicles. Join us in pushing the boundaries of aerospace
                 engineering.
@@ -72,14 +79,13 @@ export default function Home() {
               </div>
             </div>
             <div
-              className="relative h-[600px] hidden lg:block rounded-lg overflow-hidden"
+              className="relative h-[600px] hidden lg:block rounded-lg overflow-hidden "
               data-aos="fade-left"
             >
-              <Image
-                src="/drone3new.png"
-                alt="Drone"
-                fill
-                className="object-contain"
+              <Lottie
+                animationData={droneAnimation}
+                loop
+                className="w-full h-full scale-115 "
               />
             </div>
           </div>
@@ -89,7 +95,12 @@ export default function Home() {
 
       <section className="py-20" data-aos="fade-up">
         <div className="container mx-auto px-4">
-          <h2 className="section-heading">FEATURED PROJECTS</h2>
+          <h2
+            className="section-heading"
+            style={{ fontFamily: "Archivo, sans-serif" }}
+          >
+            FEATURED PROJECTS
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -126,8 +137,18 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-gray-400 mb-4">{project.description}</p>
+                  <h3
+                    className="text-xl font-bold mb-2"
+                    style={{ fontFamily: "Archivo, sans-serif" }}
+                  >
+                    {project.title}
+                  </h3>
+                  <p
+                    className="text-gray-400 mb-4"
+                    style={{ fontFamily: "Roboto, sans-serif" }}
+                  >
+                    {project.description}
+                  </p>
                   <Button
                     variant="link"
                     className="text-primary p-0 flex items-center gap-1"
@@ -160,7 +181,12 @@ export default function Home() {
       {/* Achievements Section */}
       <section className="py-20" data-aos="fade-up">
         <div className="container mx-auto px-4">
-          <h2 className="section-heading">ACHIEVEMENTS</h2>
+          <h2
+            className="section-heading"
+            style={{ fontFamily: "Archivo, sans-serif" }}
+          >
+            ACHIEVEMENTS
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -197,10 +223,18 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">
+                  <h3
+                    className="text-xl font-bold mb-2"
+                    style={{ fontFamily: "Archivo, sans-serif" }}
+                  >
                     {achievement.title}
                   </h3>
-                  <p className="text-gray-400">{achievement.description}</p>
+                  <p
+                    className="text-gray-400"
+                    style={{ fontFamily: "Roboto, sans-serif" }}
+                  >
+                    {achievement.description}
+                  </p>
                 </div>
               </div>
             ))}
@@ -234,8 +268,16 @@ export default function Home() {
               />
             </div>
             <div className="space-y-6">
-              <h2 className="text-4xl font-bold">ABOUT US</h2>
-              <p className="text-gray-300">
+              <h2
+                className="text-4xl font-bold"
+                style={{ fontFamily: "Archivo, sans-serif" }}
+              >
+                ABOUT US
+              </h2>
+              <p
+                className="text-gray-300"
+                style={{ fontFamily: "Roboto, sans-serif" }}
+              >
                 The Aero Fabrication Club. As the name itself suggests the clubs
                 invokes learning in students by incorporating two major topics
                 which form the building blocks of all the engineering sciences.
@@ -263,8 +305,16 @@ export default function Home() {
         data-aos="fade-up"
       >
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Take Flight?</h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
+          <h2
+            className="text-4xl font-bold mb-6"
+            style={{ fontFamily: "Archivo, sans-serif" }}
+          >
+            Ready to Take Flight?
+          </h2>
+          <p
+            className="text-xl text-gray-300 max-w-2xl mx-auto mb-8"
+            style={{ fontFamily: "Roboto, sans-serif" }}
+          >
             Join the AeroFabrication Club and be part of our innovative team
             pushing the boundaries of aerospace engineering.
           </p>
