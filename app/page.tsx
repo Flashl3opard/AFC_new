@@ -5,10 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ArrowRight } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRocket, faTrophy, faUsers } from "@fortawesome/free-solid-svg-icons";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
-import Lottie from "lottie-react";
-import droneAnimation from "@/public/droneGIF3.json";
 
 export default function Home() {
   useEffect(() => {
@@ -24,16 +24,12 @@ export default function Home() {
         className="relative min-h-screen flex items-center pt-16"
         data-aos="fade-up"
       >
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r " />
-        </div>
-
         <div className="container mx-auto px-4 z-10 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1
-                className="text-5xl md:text-7xl tracking-tight font-extrabold"
-                style={{ fontFamily: "Archivo, sans-serif" }} // Apply Archivo font
+                className="text-5xl md:text-7xl tracking-tight font-extrabold text-white"
+                style={{ fontFamily: "Archivo, sans-serif" }}
                 data-aos="fade-right"
               >
                 AERO
@@ -43,14 +39,14 @@ export default function Home() {
                 CLUB
               </h1>
               <p
-                className="text-xl md:text-2xl font-medium text-primary"
-                style={{ fontFamily: "Roboto, sans-serif" }} // Apply Roboto font
+                className="text-xl md:text-2xl font-medium text-yellow-300"
+                style={{ fontFamily: "Roboto, sans-serif" }}
                 data-aos="fade-left"
               >
                 WHERE PASSION MEETS PROPULSION
               </p>
               <p
-                className="text-gray-300 max-w-lg"
+                className="text-gray-200 max-w-lg"
                 style={{ fontFamily: "Roboto, sans-serif" }}
                 data-aos="fade-up"
               >
@@ -61,7 +57,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-4">
                 <Button
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-black font-bold"
+                  className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold transition duration-300"
                   asChild
                   data-aos="fade-up"
                 >
@@ -70,7 +66,7 @@ export default function Home() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-primary text-primary hover:bg-primary/10"
+                  className="border-yellow-500 text-yellow-500 hover:bg-yellow-100 transition duration-300"
                   asChild
                   data-aos="fade-up"
                 >
@@ -79,26 +75,27 @@ export default function Home() {
               </div>
             </div>
             <div
-              className="relative h-[600px] hidden lg:block rounded-lg overflow-hidden "
+              className="relative h-[600px] hidden lg:block rounded-lg overflow-hidden shadow-lg"
               data-aos="fade-left"
             >
-              <Lottie
-                animationData={droneAnimation}
-                loop
-                className="w-full h-full scale-115 "
+              <Image
+                src="/drone3new.png"
+                alt="Drone"
+                fill
+                className="object-contain"
               />
             </div>
           </div>
         </div>
-        <div className="wave-pattern"></div>
       </section>
 
-      <section className="py-20" data-aos="fade-up">
+      <section className="py-20 " data-aos="fade-up">
         <div className="container mx-auto px-4">
           <h2
-            className="section-heading"
+            className="section-heading text-white text-3xl font-bold mb-8"
             style={{ fontFamily: "Archivo, sans-serif" }}
           >
+            <FontAwesomeIcon icon={faRocket} className="mr-2" />
             FEATURED PROJECTS
           </h2>
 
@@ -125,7 +122,7 @@ export default function Home() {
             ].map((project, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden card-hover"
+                className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105"
                 data-aos="fade-up"
               >
                 <div className="relative h-64">
@@ -138,7 +135,7 @@ export default function Home() {
                 </div>
                 <div className="p-6">
                   <h3
-                    className="text-xl font-bold mb-2"
+                    className="text-xl font-bold mb-2 text-white"
                     style={{ fontFamily: "Archivo, sans-serif" }}
                   >
                     {project.title}
@@ -151,7 +148,7 @@ export default function Home() {
                   </p>
                   <Button
                     variant="link"
-                    className="text-primary p-0 flex items-center gap-1"
+                    className="text-yellow-500 p-0 flex items-center gap-1"
                     asChild
                   >
                     <Link href="/projects">
@@ -167,7 +164,7 @@ export default function Home() {
             <Button
               variant="outline"
               size="lg"
-              className="border-primary text-primary hover:bg-primary/10"
+              className="border-yellow-500 text-yellow-500 hover:bg-yellow-100 transition duration-300"
               asChild
             >
               <Link href="/projects" className="flex items-center gap-2">
@@ -179,12 +176,13 @@ export default function Home() {
       </section>
 
       {/* Achievements Section */}
-      <section className="py-20" data-aos="fade-up">
+      <section className="py-20 " data-aos="fade-up">
         <div className="container mx-auto px-4">
           <h2
-            className="section-heading"
+            className="section-heading text-white text-3xl font-bold mb-8"
             style={{ fontFamily: "Archivo, sans-serif" }}
           >
+            <FontAwesomeIcon icon={faTrophy} className="mr-2" />
             ACHIEVEMENTS
           </h2>
 
@@ -211,7 +209,7 @@ export default function Home() {
             ].map((achievement, index) => (
               <div
                 key={index}
-                className="rounded-lg overflow-hidden card-hover"
+                className="rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105"
                 data-aos="fade-up"
               >
                 <div className="relative h-64">
@@ -224,7 +222,7 @@ export default function Home() {
                 </div>
                 <div className="p-6">
                   <h3
-                    className="text-xl font-bold mb-2"
+                    className="text-xl font-bold mb-2 text-white"
                     style={{ fontFamily: "Archivo, sans-serif" }}
                   >
                     {achievement.title}
@@ -244,7 +242,7 @@ export default function Home() {
             <Button
               variant="outline"
               size="lg"
-              className="border-primary text-primary hover:bg-primary/10"
+              className="border-yellow-500 text-yellow-500 hover:bg-yellow-100 transition duration-300"
               asChild
             >
               <Link href="/achievements" className="flex items-center gap-2">
@@ -256,10 +254,10 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-20" data-aos="fade-up">
+      <section className="py-20 " data-aos="fade-up">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[400px] rounded-lg overflow-hidden">
+            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
               <Image
                 src="/aboutpng.png"
                 alt="Team Photo"
@@ -269,9 +267,10 @@ export default function Home() {
             </div>
             <div className="space-y-6">
               <h2
-                className="text-4xl font-bold"
+                className="text-4xl font-bold text-white"
                 style={{ fontFamily: "Archivo, sans-serif" }}
               >
+                <FontAwesomeIcon icon={faUsers} className="mr-2" />
                 ABOUT US
               </h2>
               <p
@@ -288,7 +287,7 @@ export default function Home() {
                 learning family.
               </p>
               <Button
-                className="bg-primary hover:bg-primary/90 text-black font-bold"
+                className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold transition duration-300"
                 asChild
                 data-aos="fade-up"
               >
@@ -300,19 +299,16 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section
-        className="py-20 bg-gradient-to-b from-blue-950/20 to-black relative"
-        data-aos="fade-up"
-      >
+      <section className="py-20 relative" data-aos="fade-up">
         <div className="container mx-auto px-4 text-center">
           <h2
-            className="text-4xl font-bold mb-6"
+            className="text-4xl font-bold mb-6 text-white"
             style={{ fontFamily: "Archivo, sans-serif" }}
           >
             Ready to Take Flight?
           </h2>
           <p
-            className="text-xl text-gray-300 max-w-2xl mx-auto mb-8"
+            className="text-xl text-gray-200 max-w-2xl mx-auto mb-8"
             style={{ fontFamily: "Roboto, sans-serif" }}
           >
             Join the AeroFabrication Club and be part of our innovative team
@@ -320,7 +316,7 @@ export default function Home() {
           </p>
           <Button
             size="lg"
-            className="bg-primary hover:bg-primary/90 text-black font-bold"
+            className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold transition duration-300"
             asChild
           >
             <Link href="/contact">Contact Us</Link>
