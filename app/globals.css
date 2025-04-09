@@ -102,3 +102,9 @@ body {
 .glow-shadow {
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.5);
 }
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent; /* Hide the cursor */
+  }
+}

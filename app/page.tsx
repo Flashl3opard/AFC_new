@@ -40,17 +40,22 @@ export default function Home() {
                 CLUB
               </h1>
               <TypeAnimation
+                className="font-bold"
                 sequence={[
                   "WHERE PASSION MEETS PROPULSION ✈️✈️",
                   2000,
                   "",
                   1000,
                 ]}
-                speed={10}
+                speed={10} // Adjust speed for a more realistic typing effect
                 style={{
-                  fontFamily: "Roboto, sans-serif",
-                  fontSize: "1.5rem",
+                  fontFamily: "Courier New, monospace", // Use a monospace font
+                  fontSize: "1.8rem",
                   color: "#FBBF24",
+                  whiteSpace: "nowrap", // Prevent text wrapping
+                  overflow: "hidden", // Hide overflow
+                  borderRight: "2px solid #FBBF24", // Create a cursor effect
+                  animation: "blink-caret 0.75s step-end infinite", // Add blinking cursor animation
                 }}
                 repeat={Infinity}
               />
