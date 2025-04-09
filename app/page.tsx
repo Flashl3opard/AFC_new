@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRocket, faTrophy, faUsers } from "@fortawesome/free-solid-svg-icons";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
+import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   useEffect(() => {
@@ -38,13 +39,21 @@ export default function Home() {
                 <br />
                 CLUB
               </h1>
-              <p
-                className="text-xl md:text-2xl font-medium text-yellow-300"
-                style={{ fontFamily: "Roboto, sans-serif" }}
-                data-aos="fade-left"
-              >
-                WHERE PASSION MEETS PROPULSION
-              </p>
+              <TypeAnimation
+                sequence={[
+                  "WHERE PASSION MEETS PROPULSION ✈️✈️",
+                  2000,
+                  "",
+                  1000,
+                ]}
+                speed={10}
+                style={{
+                  fontFamily: "Roboto, sans-serif",
+                  fontSize: "1.5rem",
+                  color: "#FBBF24",
+                }}
+                repeat={Infinity}
+              />
               <p
                 className="text-gray-200 max-w-lg"
                 style={{ fontFamily: "Roboto, sans-serif" }}
@@ -122,7 +131,7 @@ export default function Home() {
             ].map((project, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105"
+                className="bg-gradient-to-b from-blue-950/30 to-black border border-blue-900/20 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-110 hover:shadow-lg hover:shadow-yellow-500/50"
                 data-aos="fade-up"
               >
                 <div className="relative h-64">
@@ -209,7 +218,7 @@ export default function Home() {
             ].map((achievement, index) => (
               <div
                 key={index}
-                className="rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105"
+                className="rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-110 hover:shadow-lg hover:shadow-yellow-500/50"
                 data-aos="fade-up"
               >
                 <div className="relative h-64">
