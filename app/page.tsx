@@ -9,7 +9,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRocket, faTrophy, faUsers } from "@fortawesome/free-solid-svg-icons";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
-import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   useEffect(() => {
@@ -39,26 +38,15 @@ export default function Home() {
                 <br />
                 CLUB
               </h1>
-              <TypeAnimation
-                className="font-bold"
-                sequence={[
-                  "WHERE PASSION MEETS PROPULSION ✈️✈️",
-                  2000,
-                  "",
-                  1000,
-                ]}
-                speed={10} // Adjust speed for a more realistic typing effect
-                style={{
-                  fontFamily: "Courier New, monospace", // Use a monospace font
-                  fontSize: "1.8rem",
-                  color: "#FBBF24",
-                  whiteSpace: "nowrap", // Prevent text wrapping
-                  overflow: "hidden", // Hide overflow
-                  borderRight: "2px solid #FBBF24", // Create a cursor effect
-                  animation: "blink-caret 0.75s step-end infinite", // Add blinking cursor animation
-                }}
-                repeat={Infinity}
-              />
+
+              <p
+                className="text-yellow-500 max-w-lg text-2xl font-bold font-serif" // Updated text color to yellow
+                style={{ fontFamily: "Roboto, sans-serif" }}
+                data-aos="fade-up"
+              >
+                WHERE PASSION MEETS PROPULSION ✈️
+              </p>
+
               <p
                 className="text-gray-200 max-w-lg"
                 style={{ fontFamily: "Roboto, sans-serif" }}
